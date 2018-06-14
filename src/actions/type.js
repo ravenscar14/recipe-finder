@@ -1,1 +1,2 @@
 export const SET_RECIPE = "SET_RECIPE";
+export const FAVORITE_RECIPE = "FAVORITE_RECIPE";

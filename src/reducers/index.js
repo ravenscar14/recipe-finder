@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
-import recipes from './recipe_reducer';
+import { recipes, favoriteRecipes } from './recipe_reducer';
 
 export default combineReducers({
-    recipes
+    recipes,
+    favoriteRecipes
 });
 
 

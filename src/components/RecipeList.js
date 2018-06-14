@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { CardDeck } from 'reactstrap';
 import RecipeItem from './RecipeItem';
 
 class RecipeList extends Component {
     render() {
-        console.log(this.props);
         return (
-            <div className="parent">
+            <div className="recipe_card_container container">
                 {this.props.recipes.map(item => <RecipeItem key={item.title} recipe={item} />)}
             </div>
         )
@@ -19,4 +17,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, null)(RecipeList);
-// style={{display: 'flex', flexWrap: 'wrap', }

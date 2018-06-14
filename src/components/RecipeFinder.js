@@ -7,8 +7,8 @@ import { connect } from 'react-redux';
 class RecipeFinder extends Component {
 
     state = {
-        ingredients: 'onions,garlic',
-        dish: 'omelet'
+        ingredients: '',
+        dish: ''
     }
 
     handleClick = () => {
@@ -28,8 +28,12 @@ class RecipeFinder extends Component {
         return (
             <div className="recipe_finder_form">
                 <div style={{width:'100%'}}>
-                    <Navbar style={{justifyContent: 'center', backgroundColor:'coral'}}>
-                        <NavbarBrand style={{color:'#fff'}} href="/">Recipe Finder</NavbarBrand>
+                    <Navbar style={{justifyContent: 'center'}} className="section_style">
+                        <NavbarBrand style={{color:'#fff'}} href="/">
+                            <h1>
+                                <span className="highlight">R</span>ecipe <span className="highlight">F</span>inder
+                            </h1>
+                        </NavbarBrand>
                     </Navbar>
                 </div>
                 <div className="mt-2">
@@ -52,7 +56,7 @@ class RecipeFinder extends Component {
                                 value={this.state.dish}
                                 onChange={event => this.setState({ dish: event.target.value })} />
                         </FormGroup>
-                        <Button onClick={this.handleClick.bind(this)}>Search</Button>
+                        <Button onClick={this.handleClick.bind(this)} className="site_button">Search</Button>
                     </Form>
                 </div>
             </div>
